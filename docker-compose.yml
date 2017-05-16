@@ -7,8 +7,8 @@ services:
     volumes:
       - ./uploads:/app/uploads
     environment:
-      - PORT=80
-      - ROOT_URL=http://146.185.152.120:80
+      - PORT=3003
+      - ROOT_URL=http://localhost:3003
       - MONGO_URL=mongodb://mongo:27017/rocketchat
       - MONGO_OPLOG_URL=mongodb://mongo:27017/local
       - MAIL_URL=smtp://smtp.email
@@ -20,7 +20,7 @@ services:
     depends_on:
       - mongo
     ports:
-      - 80:80
+      - 3003:3003
     labels:
       - "traefik.backend=rocketchat"
       - "traefik.frontend.rule=Host: your.domain.tld"
