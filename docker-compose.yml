@@ -48,7 +48,7 @@ services:
     image: rocketchat/hubot-rocketchat:latest
     restart: unless-stopped
     environment:
-      - ROCKETCHAT_URL=rocketchat:3000
+      - ROCKETCHAT_URL=rocketchat:3003
       - ROCKETCHAT_ROOM=GENERAL
       - ROCKETCHAT_USER=bot
       - ROCKETCHAT_PASSWORD=botpassword
